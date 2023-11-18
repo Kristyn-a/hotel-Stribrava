@@ -1,18 +1,16 @@
-import './style.css';
+import "./style.css";
 
 export const Header = () => {
   return (
-    <header>
-      <div class="banner">
-        <div class="banner__stripe">
-          <div class="container">
-            <h1>Hotel Stříbrava</h1>
-            <p class="lead">
-              Rodinný hotel v malebné krajině Českého středohoří.
-            </p>
-          </div>
+    <div className="banner">
+      <div className="banner__stripe">
+        <div className="container">
+          <h1>Hotel Stříbrava</h1>
+          <p className="lead">
+            Rodinný hotel v malebné krajině Českého středohoří.
+          </p>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
