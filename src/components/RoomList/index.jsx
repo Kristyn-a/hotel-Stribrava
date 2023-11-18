@@ -1,9 +1,8 @@
-import "./style.css";
-import { useState, useEffect } from "react";
-import { Room } from "../Room";
+import './style.css';
+import { useState, useEffect } from 'react';
+import { Room } from '../Room';
 
-export const RoomList = ({rooms}) => {
- 
+export const RoomList = ({ rooms, onChoose }) => {
   return (
     <section className="dark">
       <div className="container">
@@ -11,12 +10,15 @@ export const RoomList = ({rooms}) => {
         <p>Vyberte si, který z našich pokojů je pro Vás ten pravý.</p>
         <div className="cards-row">
           {rooms.map((room) => (
-            <Room key={room.id} img={room} room={room.room} cena={room.cena} />
-            ))}
-
+            <Room
+              key={room.id}
+              img={room.img}
+              room={room.pokoj}
+              cena={room.cena}
+            />
+          ))}
         </div>
       </div>
     </section>
   );
 };
-
